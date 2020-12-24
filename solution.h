@@ -9,9 +9,10 @@ class Solution {
 public:
   int nextGreaterElement(int n) {
     int result = -1;
-    int first_digit = getDigit(0, n);
-    for (int i = 1; int next_digit = getDigit(i, n); ++i) {
-      if (next_digit < first_digit) {
+    const int first_digit = getDigit(0, n);
+    const int count = digitCount(n);
+    for (int i = 1; i < count; ++i) {
+      if (getDigit(i, n) < first_digit) {
         result = swapDigits(0, i, n);
         break;
       }
@@ -46,7 +47,8 @@ private:
         result = 0;
         int max_pos = std::max(pos1, pos2);
         int min_pos = std::min(pos1, pos2);
-        for (int i = 0; int next_digit = getDigit(i, number); ++i) {
+        const int count = digitCount(number);
+        for (int i = 0; i < count; ++i) {
           int pos = (max_pos == i || min_pos == i)
               ? other(i, {min_pos, max_pos})
               : i;
@@ -59,6 +61,15 @@ private:
     }
 
     return result;
+  }
+
+  int digitCount(int number) {
+    int count = 0;
+    for (int i = 0; number / static_cast<int>(std::pow(10, count)); ++i) {
+      ++count;
+    }
+
+    return count;
   }
 
   template <typename Type>

@@ -11,5 +11,6 @@ int main()
   cout << "nextGreaterElement(12) = " << s.nextGreaterElement(12) << endl;
   cout << "nextGreaterElement(211) = " << s.nextGreaterElement(211) << endl;
   cout << "nextGreaterElement(7435) = " << s.nextGreaterElement(7435) << endl;
+  cout << "nextGreaterElement(101) = " << s.nextGreaterElement(101) << endl;
   return 0;
 }
