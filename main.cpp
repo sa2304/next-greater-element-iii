@@ -13,6 +13,7 @@ int main()
   cout << "nextGreaterElement(7435) = " << s.nextGreaterElement(7435) << endl;
   cout << "nextGreaterElement(101) = " << s.nextGreaterElement(101) << endl;
   cout << "nextGreaterElement(230241) = " << s.nextGreaterElement(230241) << endl;
+  cout << "s.nextGreaterElement(1999999999) = " << s.nextGreaterElement(1999999999) << endl;
 
   return 0;
 }

@@ -24,8 +24,8 @@ TEST_F(TestClass, testExample) {
   ASSERT_EQ(-1, s.nextGreaterElement(211));
   ASSERT_EQ(7453, s.nextGreaterElement(7435));
   ASSERT_EQ(110, s.nextGreaterElement(101));
-  ASSERT_EQ(230214, s.nextGreaterElement(230241));
-
+  ASSERT_EQ(230412, s.nextGreaterElement(230241));
+  ASSERT_EQ(-1, s.nextGreaterElement(1999999999));
 }
 
 //------------------------------------------------------------------------------
